@@ -86,11 +86,10 @@ pipeline {
             steps {
                 dir('backend-1') {
                     bat '''
-                    set PATH=%SONAR_SCANNER_PATH%;%PATH%
-                    sonar-scanner -Dsonar.projectKey=backend-task-1 ^ 
-                        -Dsonar.sources=. ^ 
-                        -Dsonar.host.url=http://localhost:9000 ^ 
-                        -Dsonar.token=%SONAR_TOKEN% 2>&1
+                    D:/altered/sonar-scanner-6.2.1.4610-windows-x64/bin/sonar-scanner.bat -Dsonar.projectKey=backend-task-1 ^
+                        -Dsonar.sources=. ^
+                        -Dsonar.host.url=http://localhost:9000 ^
+                        -Dsonar.token=%SONAR_TOKEN%
                     '''
                 }
             }

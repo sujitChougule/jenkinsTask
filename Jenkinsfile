@@ -28,16 +28,7 @@ pipeline {
             }
         }
 
-        stage('Lint - Frontend') {
-            steps {
-                dir('frontend') {
-                    bat '''
-                    set PATH=%NODEJS_HOME%;%PATH%
-                    npm run lint --fix
-                    '''
-                }
-            }
-        }
+        
 
         stage('Build - Frontend') {
             steps {

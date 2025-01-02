@@ -48,7 +48,7 @@ pipeline {
             steps {
                 dir('frontend') {
                     bat '''
-                    D:\altered\sonar-scanner-6.2.1.4610-windows-x64\bin\sonar-scanner.bat -Dsonar.projectKey=frontend-task-1 ^
+                    D:/altered/sonar-scanner-6.2.1.4610-windows-x64/bin/sonar-scanner.bat -Dsonar.projectKey=frontend-task-1 ^
                         -Dsonar.sources=. ^
                         -Dsonar.host.url=http://localhost:9000 ^
                         -Dsonar.token=%SONAR_TOKEN%

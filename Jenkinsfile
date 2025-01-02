@@ -48,12 +48,10 @@ pipeline {
             steps {
                 dir('frontend') {
                     bat '''
-                    set PATH=%SONAR_SCANNER_PATH%;%PATH%
-                    where sonar-scanner || echo "SonarQube scanner not found. Please install it."
-                    sonar-scanner -Dsonar.projectKey=frontend-task-1 ^ 
-                        -Dsonar.sources=. ^ 
-                        -Dsonar.host.url=http://localhost:9000 ^ 
-                        -Dsonar.token=%SONAR_TOKEN% 2>&1
+                    D:\altered\sonar-scanner-6.2.1.4610-windows-x64\bin\sonar-scanner.bat -Dsonar.projectKey=frontend-task-1 ^
+                        -Dsonar.sources=. ^
+                        -Dsonar.host.url=http://localhost:9000 ^
+                        -Dsonar.token=%SONAR_TOKEN%
                     '''
                 }
             }

@@ -33,7 +33,7 @@ pipeline {
                 dir('frontend') {
                     bat '''
                     set PATH=%NODEJS_HOME%;%PATH%
-                    npm run lint
+                    npm run lint --fix
                     '''
                 }
             }

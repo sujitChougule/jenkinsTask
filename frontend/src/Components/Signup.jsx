@@ -7,7 +7,7 @@ function Signup() {
     const [name,setName]=useState("");
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
-
+    const navigate=useNavigate();
     const handleSingup=(e)=>{
         e.preventDefault();
         axios.post("http://localhost:3000/signup",{name,email,password}).then(result=>{

@@ -68,16 +68,7 @@ pipeline {
             }
         }
 
-        stage('Build - Backend ') {
-            steps {
-                dir('backend') {
-                    bat '''
-                    set PATH=%NODEJS_HOME%;%PATH%
-                    npm run build
-                    '''
-                }
-            }
-        }
+    
 
         stage('SonarQube Analysis - Backend 1') {
             environment {

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 function Signup() {
     const [name,setName]=useState("");
-    const [email,setEmail]=useState("");
+    let email="";
     const [password,setPassword]=useState("");
     const navigate=useNavigate();
     const handleSingup=(e)=>{
